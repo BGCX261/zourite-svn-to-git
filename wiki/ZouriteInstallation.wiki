@@ -1,0 +1,36 @@
+#labels Featured
+= Introduction =
+Currently i do not provide a .deb file that the N900 application manager can handle. I only provide standard binary and source package ala python.
+
+= Installaton =
+
+== Requirement ==
+
+Zourite need gdata 2.0.9 in order to make gmail plugin working.
+
+You must have a LinkedIn API key and secret respectively store in ~/.zourite/linkedin the li_api_key and  li_secret_key file. Create yourself a Developper account on LinkedIn? or join the project so i can share this credential with you ! *since 0.4.0 this is optional*
+
+== Source package ==
+
+Download the tar.gz you found on [http://code.google.com/p/zourite/downloads/list Downloads tab]
+  * uncompress the file every where you want using `gunzip file` then `tar -xvf file` replacin file by the current filename you've downloaded
+  * go in to zourite/ directory
+  * swith to root with `sudo gainroot`
+  * run the standard installation python command `python setup.py install`
+  * exit from root shell
+  * now you have a new command, try `zourite`
+  * enjoy !
+  * since 0.2.0-3 you have an icon in maemo program to launch the program and you can add it as shortcut on the desktop
+
+== Binary package ==
+
+Download the tar.gz you found on [http://code.google.com/p/zourite/downloads/list Downloads tab]
+  * get root privilege with `sudo gainroot`
+  * uncompress the file at the root of the filesystem
+  * exit root shell
+  * enjoy new command `zourite`
+  * since 0.2.0-3 you have an icon in maemo program to launch the program and you can add it as shortcut on the desktop
+
+= Setup =
+
+The installation have add a new command in the N900. `zourite-setup` will now start the setup process by configuring the 2 available plugins: LinkedIn and gmail.

@@ -1,0 +1,9 @@
+#Fri Apr 02 17:18:19 BST 2010
+eclipse.preferences.version=1
+encoding//src/zourite/bootstrap.py=UTF-8
+encoding//src/zourite/common/version.py=UTF-8
+encoding//src/zourite/core/plugin.py=UTF-8
+encoding//src/zourite/gui/zouriteGui.py=UTF-8
+encoding//src/zourite/plugin/gmail/gmailplugin.py=UTF-8
+encoding//src/zourite/plugin/linkedin/linkedinplugin.py=UTF-8
+encoding/setup.py=UTF-8

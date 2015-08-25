@@ -1,0 +1,44 @@
+#summary run Zourite from the source
+
+= Introduction =
+
+I'am not able to make a clean package for Zourite (e.g .deb) now because i am coding the core feature. This page show how you can checkout the source and run Zourite.
+
+
+= requirement =
+
+Since Zourite now have a built in post issue feature using google code, you must have gdata library. So checkout the last version 2.0.9 of python-gdata and install it with the following command  `python setup.py install`
+
+= Installation =
+
+  * checkout the sources file like described on [http://code.google.com/p/zourite/source/checkout Source tab]
+  * you must have a LinkedIn API key and secret respectively store in ~/.zourite/linkedin the li_api_key and cd li_secret_key file. Create yourself a Developper account on LinkedIn or join the project so i can share this credential with you ! *since 0.4.0 this is optional*
+
+= Settings = 
+
+Currenlty the Zourite Gui don't provide a way to setup plugin parameters. You can only choose which plugin are used and what sort of caching you want. Plugin specific settings must be done from the command line with `bootstrap.py`
+
+The bootstrap script will take each available plugin and run the configuration process.
+You can comment out a plugin if you dont want the bootstrap to configure it.
+
+== LinkedIn settings ==
+
+  * suppose the source are in /home/user/zourite, go in /home/user/zourite/src/zourite direcctory
+  * export PYTHONPTH with `export PYTHONPATH=$PYTHONPATH:/home/user/zourite/src`
+  * run the bootstrap with `python bootstrap.py setup` from a command line
+  * this will open the browser in LinkedIn site. Log in and accept the access. LinkedIn site show up a verification code
+  * back to the command line enter the verification code
+  * Now the bootstrap exit and LinkedIn plugin is now configured
+  * launch Zourite with `python bootstrap.py`
+  * have fun !
+
+== gmail settings ==
+
+  * suppose the source are in /home/user/zourite, go in /home/user/zourite/src/zourite direcctory
+  * export PYTHONPTH with `export PYTHONPATH=$PYTHONPATH:/home/user/zourite/src`
+  * run the bootstrap with `python bootstrap.py setup` from a command line
+  * enter the login without the @gmail
+  * enter the password (be aware to di this on a private terminal with only trusted application on it since Zourite currently don't save the password in a safe place)
+  * Now the bootstrap exit and gmail plugin is now configured
+  * launch Zourite with `python bootstrap.py`
+  * have fun !
